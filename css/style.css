@@ -89,7 +89,9 @@ img { display: block; max-width: 100%; }
   height: 100dvh;
   overflow: hidden;
   background: #000;
+  touch-action: none;
 }
+.cta-btn, .dot, a { touch-action: manipulation; }
 
 .seq-canvas {
   position: absolute;

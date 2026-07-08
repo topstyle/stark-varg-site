@@ -141,23 +141,22 @@
     nudgeTarget(dy * WHEEL_SENSITIVITY);
   }, { passive: false });
 
-  // Touch = relative drag, same delta-based feel as the wheel.
-  const TOUCH_SENSITIVITY = 0.6;
-  let touchLastX = null;
+  // Touch = vertical drag (natural swipe-to-scroll gesture), same delta-based feel as the wheel.
+  const TOUCH_SENSITIVITY = 0.5;
+  let touchLastY = null;
   window.addEventListener('touchstart', (e) => {
+    if (e.target.closest('button, a')) { touchLastY = null; return; } // let taps on buttons/links through
     e.preventDefault();
-    touchLastX = e.touches && e.touches.length ? e.touches[0].clientX : null;
+    touchLastY = e.touches && e.touches.length ? e.touches[0].clientY : null;
   }, { passive: false });
   window.addEventListener('touchmove', (e) => {
-    if (!e.touches || !e.touches.length) return;
+    if (touchLastY === null || !e.touches || !e.touches.length) return;
     e.preventDefault();
     onFirstInteract();
-    const x = e.touches[0].clientX;
-    if (touchLastX !== null) {
-      const dx = touchLastX - x;
-      nudgeTarget(dx * TOUCH_SENSITIVITY);
-    }
-    touchLastX = x;
+    const y = e.touches[0].clientY;
+    const dy = touchLastY - y; // finger moving up = scrolling forward, matching wheel deltaY convention
+    nudgeTarget(dy * TOUCH_SENSITIVITY);
+    touchLastY = y;
   }, { passive: false });
 
   // ---------- Chapters ----------
