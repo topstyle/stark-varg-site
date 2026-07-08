@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STARK VARG — האנדורו החשמלי שמשנה הכל</title>
+<meta name="description" content="STARK VARG — אופנוע האנדורו החשמלי החזק בעולם. 80 כ״ס, אפס פליטות, אפס פשרות.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loader">
+  <img src="logo.png" alt="Stark" class="loader-logo">
+  <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+  <div class="loader-text">טוען חוויה...</div>
+</div>
+
+<header class="site-header">
+  <img src="logo.png" alt="Stark Varg" class="header-logo">
+  <span class="header-word">STARK <span class="accent">VARG</span></span>
+</header>
+
+<nav class="dots-nav" id="dotsNav">
+  <button class="dot active" data-chapter="0" aria-label="מסך פתיחה"></button>
+  <button class="dot" data-chapter="1" aria-label="החשיפה"></button>
+  <button class="dot" data-chapter="2" aria-label="שטח קשוח"></button>
+  <button class="dot" data-chapter="3" aria-label="חופש"></button>
+  <button class="dot" data-chapter="4" aria-label="הכוח החשמלי"></button>
+</nav>
+
+<main class="stage" id="stage">
+  <canvas class="seq-canvas" id="filmCanvas"></canvas>
+  <div class="vignette"></div>
+
+  <!-- CHAPTER 0 -->
+  <div class="chapter hero-content active" id="chapter0">
+    <p class="eyebrow">STARK FUTURE PRESENTS</p>
+    <h1 class="hero-title">משהו גדול<br>מתכסה ביער</h1>
+    <p class="hero-sub">האנדורו החשמלי שמשנה את כללי המשחק עומד להיחשף.<br>הזיזו את העכבר כדי לחוות אותו.</p>
+    <button class="cta-btn" data-next="1">
+      <span>גלו את הוארג</span>
+      <svg class="cta-arrow" viewBox="0 0 24 24" width="20" height="20"><path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- CHAPTER 1 -->
+  <div class="chapter side-content side-right" id="chapter1">
+    <p class="eyebrow">01 / החשיפה</p>
+    <h2 class="stage-title">תכננו אותו<br>מהיסוד</h2>
+    <p class="stage-text">קווי מתאר שנולדו במחלקת מירוצים, לא בקו הרכבה. כל משטח על ה-VARG נוצר כדי לחתוך אוויר, לספוג בוץ ולשרוד היכן שאופנועים אחרים נשברים.</p>
+    <button class="cta-btn ghost" data-next="2">
+      <span>המשיכו הלאה</span>
+      <svg class="cta-arrow" viewBox="0 0 24 24" width="20" height="20"><path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- CHAPTER 2 -->
+  <div class="chapter side-content side-left" id="chapter2">
+    <p class="eyebrow">02 / שטח קשוח</p>
+    <h2 class="stage-title">אין תוואי<br>שהוא לא לוקח</h2>
+    <p class="stage-text">80 כ״ס ו-110 ניוטון-מטר של מומנט מיידי, מועברים דרך גיר יחיד ותגובה מיידית לצידוד. Hard Enduro הוא לא אתגר בשביל ה-VARG — זה בית.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="stat-num">80</span><span class="stat-label">כ״ס</span></div>
+      <div class="stat"><span class="stat-num">110</span><span class="stat-label">Nm</span></div>
+      <div class="stat"><span class="stat-num">0</span><span class="stat-label">פליטות</span></div>
+    </div>
+    <button class="cta-btn ghost" data-next="3">
+      <span>המשיכו הלאה</span>
+      <svg class="cta-arrow" viewBox="0 0 24 24" width="20" height="20"><path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- CHAPTER 3 -->
+  <div class="chapter side-content side-right" id="chapter3">
+    <p class="eyebrow">03 / חופש</p>
+    <h2 class="stage-title">מהיער אל<br>קצה המדבר</h2>
+    <p class="stage-text">בלי מפזר קול. בלי רעש. רק אתם, האופק, והשקט החשמלי שנשבר רק ברעש הצמיגים על האדמה. VARG לא מגביל אתכם לפיסת שטח אחת — הוא לוקח אתכם לכל מקום.</p>
+    <button class="cta-btn ghost" data-next="4">
+      <span>הרגישו את הכוח</span>
+      <svg class="cta-arrow" viewBox="0 0 24 24" width="20" height="20"><path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
+  <!-- CHAPTER 4 -->
+  <div class="chapter hero-content final-content" id="chapter4">
+    <p class="eyebrow">04 / הכוח החשמלי</p>
+    <h2 class="hero-title final-title">100% חשמלי.<br>100% VARG.</h2>
+    <p class="hero-sub">אפס פליטות. אפס תחזוקת מנוע. אפס פשרות על ביצועים.<br>העתיד של האנדורו כבר כאן — והוא ירוק חשמל.</p>
+    <div class="final-actions">
+      <button class="cta-btn" data-next="0">
+        <span>חוו את זה שוב</span>
+      </button>
+      <a href="mailto:topstyle@gmail.com?subject=%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%94%D7%96%D7%9E%D7%99%D7%9F%20VARG" class="cta-btn ghost">
+        <span>השאירו פרטים</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mouse-hint" id="mouseHint">
+    <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4v16M8 8l4-4 4 4M8 16l4 4 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>גללו בגלגלת העכבר</span>
+  </div>
+
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
